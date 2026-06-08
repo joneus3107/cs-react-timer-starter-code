@@ -1,36 +1,18 @@
 // import "Your code here";
 import useTimer from "./useTimer";
-import { formatTime } from "./formatTime";
+import ButtonsBoard from "./components/ButtonsBoard/ButtonsBoard";
+import { timerContext } from "./Context/timerContext";
 
 function App() {
   const { time, startTimer, stopTimer, resetTimer, isStart } = useTimer(0);
 
-
-
   return (
-    <div className="App container">
-      <h1>Coder Timer</h1>
-      <div className="timer__wrapper">
-        <div className="timer__display">
-          <p>{formatTime(time)}</p>
-        </div>
-        <div className="button__wrapper">
-          <button className="button" onClick={stopTimer}>
-            Stop
-          </button>
-          <button
-            className="button"
-            onClick={startTimer}
-            disabled={isStart}
-          >
-            Start
-          </button>
-          <button className="button" onClick={resetTimer}>
-            Reset
-          </button>
-        </div>
+    <timerContext.Provider value={{ time, startTimer, stopTimer, resetTimer, isStart }}>
+      <div className="container">
+        <h1>Coder Timer</h1>
+        <ButtonsBoard/>
       </div>
-    </div>
+    </timerContext.Provider>
   );
 }
 

@@ -1,0 +1,21 @@
+.button {
+  color: white;
+  background-color: var(--text-shadow-color);
+  font-size: 1.5em;
+  border-radius: 100vh;
+  border: 1px solid white;
+  padding: 1em;
+  transition: ease-in-out 0.3s;
+	cursor: pointer;
+}
+.button:active {
+  border: 1px solid var(--text-main-color);
+  background-color: var(--text-main-color);
+}
+.button:not(:disabled):hover {
+  transform: scale(120%);
+}
+.button:disabled {
+  background-color: rgb(170, 164, 164);
+	cursor: default;
+}

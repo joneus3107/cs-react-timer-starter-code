@@ -48,50 +48,9 @@ p {
   justify-content: center;
   align-items: center;
 }
-.timer__wrapper {
-  border-radius: 24px;
-  background-color: var(--text-shadow-color);
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-}
-.timer__display {
-  padding-inline: 1.5em;
-  text-align: center;
-}
-.timer__display > p {
-  font-size: 5em;
-}
 
-.button__wrapper {
-  display: flex;
-  width: 30vw;
-  padding: 1em;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.button {
-  color: white;
-  background-color: var(--text-shadow-color);
-  font-size: 1.5em;
-  border-radius: 100vh;
-  border: 1px solid white;
-  padding: 1em;
-  transition: ease-in-out 0.3s;
-}
-.button:active {
-  border: 1px solid var(--text-main-color);
-  background-color: var(--text-main-color);
-}
-.button:hover {
-  transform: scale(120%);
-}
-.button:disabled {
-  background-color: rgb(170, 164, 164);
-}
-/* .button.active {
-  border: 1px solid var(--text-main-color);
-  background-color: var(--text-main-color);
-} */
+
+
 @media only screen and (max-device-width: 1280px) {
   * {
     font-size: 0.9em;
@@ -99,13 +58,5 @@ p {
   h1 {
     font-size: 60px;
     line-height: 0px;
-  }
-  .button__wrapper {
-    margin: auto;
-    width: 100%;
-  }
-  .timer__display > p {
-    font-size: 3.8em;
-    padding-left: 0;
   }
 }
